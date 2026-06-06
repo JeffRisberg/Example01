@@ -1,6 +1,6 @@
 package com.company;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.mockito.Mockito.*;
 
 import com.company.models.Item;
@@ -9,7 +9,8 @@ import com.company.stores.ItemStore;
 import java.util.ArrayList;
 import java.util.List;
 import lombok.extern.slf4j.Slf4j;
-import org.junit.*;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
 @Slf4j
 public class ItemServiceTest {
@@ -17,7 +18,7 @@ public class ItemServiceTest {
   private ItemStore itemStore;
   private ItemService itemService;
 
-  @Before
+  @BeforeEach
   public void setUp() throws Exception {
     itemStore = mock(ItemStore.class);
 
